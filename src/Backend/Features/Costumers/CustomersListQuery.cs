@@ -53,7 +53,7 @@ internal class CustomersListQueryHandler : IRequestHandler<CustomersListQuery, L
                 Address = item.Address,
                 Email = item.Email,
                 Phone = item.Phone,
-                Iban = item.Phone,
+                Iban = item.Iban,
                 Category = await context.CustomerCategories
                     .Where(q => q.Id == item.CustomerCategoryId)
                     .Select(q => new CustomersListQueryResponseCategory { Code = q.Code, Description = q.Description })
